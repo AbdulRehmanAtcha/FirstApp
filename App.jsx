@@ -1,9 +1,10 @@
 
-import React, { useState } from 'react';
-import { Button, FlatList, ScrollView, Text, TextInput, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Button, FlatList, ScrollView, SectionList, Text, TextInput, View } from 'react-native';
 import CompanyData from './components/CompanyData';
 import { styles } from './style';
-import { users } from './constant';
+import { people, users } from './constant';
+import People from './People';
 
 
 
@@ -122,7 +123,7 @@ const App = () => {
 
 
       {/* Dynamic Grid */}
-      <Text style={styles.heading}>Dynamic Grid</Text>
+      {/* <Text style={styles.heading}>Dynamic Grid</Text>
       <View style={{ display: "flex", flexWrap: "wrap", flexDirection: "row", padding: 10, marginTop: 10, rowGap: 8, columnGap: 5 }}>
         <Text style={styles.grid}>
           Hello
@@ -139,7 +140,24 @@ const App = () => {
         <Text style={styles.grid}>
           Hello
         </Text>
-      </View>
+        <Text style={styles.grid}>
+          Hello
+        </Text>
+      </View> */}
+
+
+      {/* Section List */}
+      <Text style={styles.heading}>Section List</Text>
+      <SectionList
+        sections={people}
+        keyExtractor={(item, index) => item + index}
+        renderItem={({ item }) => <People item={item} />}
+        renderSectionHeader={({ section: { name, id } }) => (
+          <Text style={{ fontSize: 22, color: "black" }}>{id}: {name}</Text>
+        )}
+      />
+
+
     </View>
   );
 }

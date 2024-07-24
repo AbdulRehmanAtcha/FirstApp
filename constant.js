@@ -70,3 +70,32 @@ export const users = [
         role: "Developer"
     },
 ]
+
+
+export const people = [
+    {
+        id: 1,
+        name: "Alice",
+        data: ["JavaScript", "React", "Node.js"]
+    },
+    {
+        id: 2,
+        name: "Bob",
+        data: ["HTML", "CSS", "Tailwind CSS"]
+    },
+    {
+        id: 3,
+        name: "Charlie",
+        data: ["Python", "Django", "Machine Learning"]
+    },
+    {
+        id: 4,
+        name: "Dave",
+        data: ["Java", "Spring Boot", "Microservices"]
+    },
+    {
+        id: 5,
+        name: "Eve",
+        data: ["C#", "ASP.NET", "Azure"]
+    }
+];
