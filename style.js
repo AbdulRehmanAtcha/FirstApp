@@ -1,39 +1,34 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    buttonWrapper: {
-        width: "45%",
-        marginVertical: 20
-    },
-    rowAroundCenterFlex: {
-        display: "flex",
-        justifyContent: "space-around",
+    mainContainer: {
+        justifyContent: "center",
         alignItems: "center",
-        flexDirection: "row"
+        flex: 1,
+        rowGap: 20
     },
-    heading: {
-        fontSize: 28,
-        textAlign: "center",
-        marginTop: 13,
-        color: "green"
+    radioWrapper: {
+        flexDirection: "row",
+        alignItems: "center",
+        columnGap: 10
     },
-    input: {
-        fontSize: 22,
-        color: "red",
-        padding: 10,
-        borderColor: "black",
+    radioOutBox: {
+        height: 35,
+        width: 35,
+        borderRadius: 50,
         borderWidth: 2,
-        width: "97%",
-        borderRadius: 4
+        borderColor: "black",
+        justifyContent: "center",
+        alignItems: "center"
     },
-    grid: {
-        width: 120,
-        backgroundColor: "blue",
-        height: 120,
-        fontSize: 22,
-        color: "white",
-        textAlignVertical: "center",
-        textAlign: "center",
-        borderRadius: 4
+    radioText: {
+        fontSize: 25,
+        color: "black"
+    },
+    radio: {
+        height: 27,
+        width: 27,
+        borderRadius: 50,
+        backgroundColor: "black"
     }
 })
